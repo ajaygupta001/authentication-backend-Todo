@@ -13,7 +13,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://authentication-frontend-todo.vercel.app/"],
+    origin: ["https://authentication-frontend-todo.vercel.app"],
     methods: ["GET", "POST"],
     credentials: true,
   })
