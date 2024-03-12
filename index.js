@@ -13,13 +13,21 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: ["https://authentication-backend-todo.vercel.app/"],
     methods: ["GET", "POST"],
     credentials: true,
   })
 );
 
 app.use(cookieParser());
+
+app.get("/",(req,res)=>{
+  res.json("Hello");
+})
+
+
+
+
 
 app.post("/register", (req, res) => {
   const { name, email, password } = req.body;
